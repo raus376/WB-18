@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+
+    <form id="investorForm">
+        <input id="inv_img" type="url" placeholder="Paste_Your_inv_img">
+        <input id="name" type="text" placeholder="Enter_Your_Name">
+        <input id="pos" type="text" placeholder="Enter_position">
+        <input id="com_logo" type="url" placeholder="Enter_Company_Url">
+        <button id="submit">Submit</button>
+    </form>
+    
+</body>
+</html>
+
+<script>
+
+document.querySelector("#investorForm").addEventListener("submit",myFun)
+
+// var arrInvestor=localStorage.getItem("InvestorData") || [];
+ var arrInvestor=JSON.parse(localStorage.getItem("InvestorData")) || [];
+
+function myFun()
+{
+    event.preventDefault()
+    var objInverstor={
+       
+        investorImg: investorForm.inv_img.value,
+        investorName:investorForm.name.value,
+        investorRole: investorForm.pos.value,
+        investorCompanyLogo: investorForm.com_logo.value
+    };
+
+    // console.log(objInverstor)
+    arrInvestor.push(objInverstor)
+     localStorage.setItem("InvestorData",JSON.stringify(arrInvestor))
+    
+    //  console.log(arrInvestor, typeof arrInvestor)
+}
+
+
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        #container{
+            display: flex;
+            gap:20px;
+        }
+        #container>div{
+            height: 400px;
+            width: 200px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+      div>img{
+          width: 100%;
+      }
+      p+img{
+          width:50%
+      }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+    
+</body>
+</html>
+
+<script>
+// document.querySelector("#box")
+
+var arrInvestor=JSON.parse(localStorage.getItem("InvestorData"))
+//  console.log(obj)
+ 
+   arrInvestor.forEach(function(ele){
+    var box=document.createElement("div")
+
+var img1=document.createElement("img")
+img1.setAttribute("src",ele.investorImg)
+
+var inv_name=document.createElement("p")
+inv_name.innerText=ele.investorName
+
+var inv_pos=document.createElement("p")
+inv_pos.innerText=ele.investorRole;
+
+var companyLogo=document.createElement("img")
+companyLogo.setAttribute("src",ele.investorCompanyLogo)
+
+// console.log(img1,inv_name,inv_pos,companyLogo)
+ box.append(img1,inv_name,inv_pos,companyLogo)
+
+var cont=document.querySelector("#container")
+cont.append(box)
+
+   })
+  
+
+</script>
