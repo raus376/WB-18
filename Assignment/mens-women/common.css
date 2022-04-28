@@ -1,0 +1,20 @@
+#nav{
+    height: 150px;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+#nav>div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
