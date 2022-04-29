@@ -1,0 +1,62 @@
+ /* #nav{
+    height: 150px;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+#nav>div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+} */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#nav{
+    height: 50px;
+    width: 100%;
+    border: 0px solid red;
+    display: flex;
+    border-radius: 10px;
+}
+#Rebok{
+    height: 100%;
+    width: 50%;
+    border: 0px solid blue;
+    background-color: rgba(1, 1, 31, 0.868);
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    
+}
+#section{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    border: 0px solid teal;
+    justify-content: space-around;
+    background-color: rgba(1, 1, 31, 0.868);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+    
+}
+p{
+    margin-left: 20px;
+    color: white;
+}
+#section>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
